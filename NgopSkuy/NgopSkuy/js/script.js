@@ -64,3 +64,24 @@ window.onclick = (e) => {
     itemDetailModal.style.display = "none";
   }
 };
+
+window.addEventListener("load", function () {
+  const form = document.getElementById("formulir");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: "POST",
+      body: data,
+    }).then(() => {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Berhasil Mengisi Data!",
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    });
+  });
+});

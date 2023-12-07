@@ -12,7 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Sweet Alert -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css"
+      integrity="sha256-VJuwjrIWHWsPSEvQV4DiPfnZi7axOaiWwKfXaJnR5tA="
+      crossorigin="anonymous" />
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
@@ -108,9 +113,9 @@
     <!-- HERO SECTION START -->
     <section class="hero" id="home">
       <main class="content">
-        <h1>Mari Sruput Kopi <span>Dengan Bersama</span></h1>
+        <h1>Setiap Moment <span> Pasti ada coffenya</span></h1>
         <p>Dengan meminum kopi bisa menenangkan pikiran</p>
-        <a href="#" class="cta">Mari Cobain Sekarang</a>
+        <a href="#" class="cta">Cobain Sekarang</a>
       </main>
     </section>
 
@@ -313,23 +318,23 @@
   allowfullscreen="" loading="lazy" 
   referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
 
-<form action="">
+<form method="POST"
+action="https://script.google.com/macros/s/AKfycbxuXW--crbiqZJ4EijfN4iBSQ5JzLssJdYETNVo6cug5_Laa5pRekN6Ba8IvwRKyn7FPg/exec"
+id="formulir">
 <div class="input-group">
-  <i data-feather="user"></i>
-  <input type="text"
-  placeholder="Nama">
+  <label for="nama"> <i data-feather="user"></i></label>
+  <input type="text" name="nama" placeholder="Nama" />
 </div>
 <div class="input-group">
-  <i data-feather="mail"></i>
-  <input type="text"
-  placeholder="email">
+  <label for="email"
+    ><i data-feather="mail"></i></label>
+  <input type="text" name="email" placeholder="E-Mail" />
 </div>
 <div class="input-group">
-  <i data-feather="phone"></i>
-  <input type="text"
-  placeholder="No Telepon">
+  <label for="nohp"><i data-feather="phone"></i></label>
+  <input type="text" name="nohp" placeholder="No Handphone" />
 </div>
-<button type="submit" class="btn">Masukkan</button>
+<button class="button" onclick="showAlert()">Kirim</button>
 </form>
 
 </div>
@@ -341,9 +346,10 @@
     <!-- Footer Start -->
     <footer>
       <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="twitter"></i></a>
-        <a href="#"><i data-feather="facebook"></i></a>
+        <a href="https://instragram.com/andikafahrezzi"><i data-feather="instagram"></i></a>
+        <a href="https://twitter.com/fhrzzz"><i data-feather="twitter"></i></a>
+        <a href="https://facebook.com/andikafahrezi.50"><i data-feather="facebook"></i></a>
+        <a href="https://github.com/Andikafahrezi"><i data-feather="github"></i></a>
       </div>
 
       <div class="links">
@@ -353,7 +359,7 @@
         <a href="#contact">Kontak Kami</a>
       </div>
 <div class="credit">
-  <p>Created by <a href="">MuhammadLatiefSeptians</a>. | &copy;2023.</p>
+  <p>Created by <a href="">kelompok</a>. | &copy;2023.</p>
 </div>
     </footer>
     <!-- Footer End -->
@@ -392,5 +398,11 @@
 
     <!-- Javascript -->
     <script src="js/script.js"></script>
+
+    <!-- Sweet Alert -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"
+      integrity="sha256-S/HO+Ru8zrLDmcjzwxjl18BQYDCvFDD7mPrwJclX6U8="
+      crossorigin="anonymous"></script>
   </body>
 </html>

@@ -510,6 +510,24 @@ body {
   cursor: pointer;
 }
 
+.contact .row form button {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  background-color: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.contact .row form button:hover {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid white;
+}
+
 /* Footer */
 footer {
   background-color: var(--primary);
