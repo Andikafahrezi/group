@@ -1,7 +1,7 @@
 :root {
   --primary: #165b06;
   --bg: #010101;
-  --star:#faf726;
+  --star: #faf726;
 }
 
 * {
@@ -73,6 +73,20 @@ body {
   transform: scaleX(0.4);
 }
 
+.navbar .navbar-nav .login {
+  margin-left: 10rem;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  font-size: 1, 2rem;
+  color: var(--bg);
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.navbar .navbar-nav .login:hover {
+  background-color: var(--primary);
+  color: white;
+}
 .navbar .navbar-extra a {
   color: #fff;
   margin: 0 0.6rem;
@@ -303,6 +317,10 @@ body {
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
+.hero .content .cta:hover {
+  background-color: var(--bg);
+}
+
 /*ABOUT SECTION */
 .about,
 .menu,
@@ -335,8 +353,9 @@ body {
   flex: 1 1 45rem;
 }
 
-.about .row.about-img img {
+.about .row .about-img img {
   width: 100%;
+  border-radius: 10%;
 }
 
 .about .row .content {
@@ -355,7 +374,6 @@ body {
   font-weight: 100;
   line-height: 1.6;
 }
-
 
 /* Menu Section */
 .menu h2,
@@ -569,71 +587,41 @@ footer .credit a {
 }
 /* modal box */
 /* item detail */
+
 .modal {
-  display: none;
+  display: flex;
+  visibility: visible;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  z-index: 9999;
-  left: 0;
+  z-index: 10;
+  width: 10%;
+  height: 10%;
+}
+.model-inner {
+  background-color: white;
+  border-radius: 0.5em;
+  max-width: 600px;
+  padding: 2em;
+  margin: auto;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+[x-cloak] {
+  display: none !important;
+}
+.overlay {
+  width: 10%;
+  height: 10%;
+  position: fixed;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-container {
-  position: relative;
-  background-color: #eee;
-  color: var(--bg);
-  margin: 15% auto;
-  padding: 1.2rem;
-  border: 1px solid #666;
-  width: 80%;
-  animation: animateModal 0.5s;
-}
-
-@keyframes animateModal {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-.modal-container .close-icon {
-  position: absolute;
-  right: 1rem;
-}
-
-.modal-content {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.modal-content img {
-  height: 13.5rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-}
-
-.modal-content p {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  margin-top: 1.2rem;
-}
-
-.modal-content a {
-  display: flex;
-  gap: 1rem;
-  width: 12rem;
-  background-color: var(--primary);
-  color: #fff;
-  margin-top: 1rem;
-  padding: 1rem 1.6rem;
+  left: 0;
+  background: black;
+  opacity: 0.75;
 }
 
 /* Media Queries */
