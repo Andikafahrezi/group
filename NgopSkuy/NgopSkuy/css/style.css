@@ -228,7 +228,7 @@ body {
 }
 
 .form-container label {
-  display: inline-block;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 1rem 0;
@@ -242,7 +242,7 @@ body {
   background-color: #ddd;
   padding: 5px;
   font-size: 1rem;
-  width: 100%;
+  width: 80%;
 }
 
 .form-container .checkout-button {
@@ -579,11 +579,15 @@ footer .links a {
 
 footer .credit {
   font-size: 0.8rem;
+  color: white;
 }
 
 footer .credit a {
-  color: var(--bg);
-  font-weight: 700;
+  font-weight: 900;
+}
+
+footer .credit a:hover{
+  color: black;
 }
 /* modal box */
 /* item detail */
@@ -718,9 +722,6 @@ footer .credit a {
     padding-top: 0;
   }
 
-  .modal-content {
-    flex-wrap: wrap;
-  }
 }
 
 /* MENU SECTION */
@@ -728,6 +729,7 @@ footer .credit a {
 .contact h2 {
   margin-bottom: 1rem;
 }
+
 .menu p,
 .contact p {
   text-align: center;

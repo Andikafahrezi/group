@@ -87,36 +87,37 @@
           </div>
         </template>
         <h4 x-show="!$store.cart.items.length" style="margin-top: 0">
-          Keranjang Masih Kosong Nih
+          Keranjang Masih Kosong!
         </h4>
         <h4 x-show="$store.cart.items.length">
           Total : <span x-text="Rupiah($store.cart.total)"></span>
         </h4>
 
         <div class="form-container" x-show="$store.cart.items.length">
-          <form action="" id="checkoutform"></form>
-          <h5>Detail Pelanggan</h5>
+          <form action="" id="checkoutform">
+            <h5>Detail Pelanggan</h5>
 
-          <label for="name">
-            <span>Name</span>
-            <input type="text" name="name" id="name" />
-          </label>
-          <label for="email">
-            <span>Email</span>
-            <input type="text" name="email" id="email" />
-          </label>
-          <label for="phone">
-            <span>Telepon</span>
-            <input type="number" name="phone" id="phone" autocomplete="off" />
-          </label>
+            <label for="name">
+              <span>Name</span>
+              <input type="text" name="name" id="name" />
+            </label>
+            <label for="email">
+              <span>Email</span>
+              <input type="text" name="email" id="email" />
+            </label>
+            <label for="phone">
+              <span>Telepon</span>
+              <input type="number" name="phone" id="phone" autocomplete="off" />
+            </label>
 
-          <button
-            class="checkout-button"
-            type="submit"
-            id="checkout-button"
-            value="checkout">
-            Checkout
-          </button>
+            <button
+              class="checkout-button"
+              type="submit"
+              id="checkout-button"
+              value="checkout">
+              Checkout
+            </button>
+          </form>
         </div>
       </div>
 
@@ -130,7 +131,7 @@
       <main class="content">
         <h1>Setiap Moment <span> Pasti ada coffenya</span></h1>
         <p>Dengan meminum kopi bisa menenangkan pikiran</p>
-        <a href="#" class="cta">Cobain Sekarang</a>
+        <a href="#products" class="cta">Cobain Sekarang</a>
       </main>
     </section>
 
@@ -165,7 +166,7 @@
         <div class="menu-card">
           <img src="img/menu/1.jpg.jpg" alt="Cappucino" class="menu-card-img" />
           <h3 class="menu-card-title">Cappucino</h3>
-          <p class="menu-card-price">Rp15.000</p>
+          <p class="menu-card-price">Rp 15.000</p>
         </div>
         <div class="menu-card">
           <img
@@ -173,7 +174,7 @@
             alt="Matcha Latte"
             class="menu-card-img" />
           <h3 class="menu-card-title">Matcha Latte</h3>
-          <p class="menu-card-price">Rp20.000</p>
+          <p class="menu-card-price">Rp 20.000</p>
         </div>
         <div class="menu-card">
           <img
@@ -181,12 +182,12 @@
             alt="Ice Americano"
             class="menu-card-img" />
           <h3 class="menu-card-title">Ice Americano</h3>
-          <p class="menu-card-price">Rp18.000</p>
+          <p class="menu-card-price">Rp 18.000</p>
         </div>
         <div class="menu-card">
           <img src="img/menu/4.jpg.jpg" alt="Spaghetti" class="menu-card-img" />
           <h3 class="menu-card-title">Spaghetti</h3>
-          <p class="menu-card-price">Rp15.000</p>
+          <p class="menu-card-price">Rp 15.000</p>
         </div>
         <div class="menu-card">
           <img
@@ -194,7 +195,7 @@
             alt="Nasi Goreng"
             class="menu-card-img" />
           <h3 class="menu-card-title">Nasi Goreng</h3>
-          <p class="menu-card-price">Rp13.000</p>
+          <p class="menu-card-price">Rp 13.000</p>
         </div>
       </div>
     </section>
@@ -342,7 +343,6 @@
     <section id="contact" class="contact">
       <h2><span>Kontak </span>Kami</h2>
       <p>Hubungi kedai kopi kami, kami siap membantu anda</p>
-
       <div class="row">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253807.50481909048!2d106.28378679453122!3d-6.297561099999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb4de7e40e41%3A0xa821ece45c882e06!2sBSD%20Central%20Business%20District!5e0!3m2!1sen!2sid!4v1696876577876!5m2!1sen!2sid"
@@ -351,6 +351,7 @@
           referrerpolicy="no-referrer-when-downgrade"
           class="map"></iframe>
 
+        <!--Menghubungkan dengan spreadsheet sebagai database  -->
         <form
           method="POST"
           action="https://script.google.com/macros/s/AKfycbxuXW--crbiqZJ4EijfN4iBSQ5JzLssJdYETNVo6cug5_Laa5pRekN6Ba8IvwRKyn7FPg/exec"
@@ -393,10 +394,11 @@
         <a href="#home">Home</a>
         <a href="#about">Tentang kami</a>
         <a href="#menu">Menu</a>
+        <a href="#products">Produk</a>
         <a href="#contact">Kontak Kami</a>
       </div>
       <div class="credit">
-        <p>Created by <a href="">kelompok</a>. | &copy;2023.</p>
+        <p>Created by <a href="#">kelompok</a>. | &copy;2023.</p>
       </div>
     </footer>
     <!-- Footer End -->
