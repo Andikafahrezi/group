@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NgopSkuy</title>
 
+    <!-- GSAP -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"></script>
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,7 +41,7 @@
   <body x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false">
     <!-- NAVBAR START -->
     <nav class="navbar" x-data>
-      <a href="#" class="navbar-logo"><img src="img/logo.png" alt=""/></a>
+      <a href="#" class="navbar-logo"><img src="img/logo.png" alt="" /></a>
 
       <div class="navbar-nav">
         <a href="#home">Home</a>
@@ -139,13 +145,13 @@
 
     <!-- ABOUT SECTION START -->
     <section id="about" class="about">
-      <h2><span>Tentang </span>Kami</h2>
+      <h2 class="abouth2"><span>Tentang</span>Kami</h2>
 
       <div class="row">
         <div class="about-img">
           <img src="img/tentang-kami.jpg.jpg" alt="Tentang Kami" />
         </div>
-        <div class="content">
+        <div class="aboutcontent">
           <h3>Kenapa harus mencoba kopi kami?</h3>
           <p>Karena kopi kami mempunyai cita rasa yang khas</p>
           <p>
@@ -159,8 +165,8 @@
 
     <!-- MENU SECTION START-->
     <section id="menu" class="menu">
-      <h2><span>Menu </span>Kami</h2>
-      <p>Tersedia beberapa macam menu pilihan :</p>
+      <h2 class="menuh2"><span>Menu </span>Kami</h2>
+      <p class="menup">Tersedia beberapa macam menu pilihan :</p>
 
       <div class="row">
         <div class="menu-card">
@@ -375,8 +381,13 @@
 
     <!-- Contact End -->
 
-    //audio klik button login dan balik lagi dengan menekan logo
-    <audio src="audio/Neck Deep - December (Lyrics).mp3" controls  hidden autoplay loop>
+    <!-- audio klik button login dan balik lagi dengan menekan logo -->
+    <audio
+      src="audio/Neck Deep - December (Lyrics).mp3"
+      controls
+      hidden
+      autoplay
+      loop>
       <i data-feather="disc"></i>
     </audio>
     <!-- Footer Start -->
@@ -448,5 +459,63 @@
       src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"
       integrity="sha256-S/HO+Ru8zrLDmcjzwxjl18BQYDCvFDD7mPrwJclX6U8="
       crossorigin="anonymous"></script>
+
+    <script>
+      TweenMax.from(".content", 1, {
+        opacity: 0,
+        delay: 1.2,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".abouth2", 2, {
+        opacity: 0,
+        delay: 4.2,
+        y: 20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".aboutcontent", 2, {
+        opacity: 0,
+        delay: 4.2,
+        x: 20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".about-img", 2, {
+        opacity: 0,
+        delay: 4.2,
+        x: -20,
+        ease: scrollX.easeInOut,
+      });
+      TweenMax.from(".menuh2", 2, {
+        opacity: 0,
+        delay: 7.2,
+        x: 20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".menup", 2, {
+        opacity: 0,
+        delay: 7.2,
+        x: 20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".menu-card-img", 2, {
+        opacity: 0,
+        delay: 7.2,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".menu-card-title", 2, {
+        opacity: 0,
+        delay: 7.2,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".menu-card-price", 2, {
+        opacity: 0,
+        delay: 7.2,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
+    </script>
   </body>
 </html>

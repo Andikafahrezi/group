@@ -49,6 +49,12 @@ body {
   width: 150px;
 }
 
+.nav-logo img:hover {
+  transition: 2.5s;
+  -webkit-transform: rotateY(-360deg);
+  transform: rotateY(-360deg);
+}
+
 .navbar .navbar-nav a {
   color: #fff;
   display: inline-block;
@@ -358,17 +364,17 @@ body {
   border-radius: 10%;
 }
 
-.about .row .content {
+.about .row .aboutcontent {
   flex: 1 1 35rem;
   padding: 0 1rem;
 }
 
-.about .row .content h3 {
+.about .row .aboutcontent h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-.about .row .content p {
+.about .row .aboutcontent p {
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
   font-weight: 100;
@@ -694,12 +700,12 @@ footer .credit a:hover{
     padding: 0;
   }
 
-  .about .row .content h3 {
+  .about .row .aboutcontent h3 {
     margin-top: 1rem;
     font-size: 2rem;
   }
 
-  .about .row .content p {
+  .about .row .aboutcontent p {
     margin-bottom: 0.8;
     font-size: 1.3rem;
     font-weight: 100;
